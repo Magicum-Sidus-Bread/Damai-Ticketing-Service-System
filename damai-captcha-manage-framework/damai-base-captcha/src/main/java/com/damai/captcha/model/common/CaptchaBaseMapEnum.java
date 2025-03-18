@@ -22,6 +22,7 @@ public enum CaptchaBaseMapEnum {
         this.codeValue = codeValue;
         this.codeDesc = codeDesc;
     }
+    
 
     public String getCodeValue() {
         return this.codeValue;

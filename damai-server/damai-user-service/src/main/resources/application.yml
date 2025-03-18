@@ -1,0 +1,124 @@
+#服务端口
+server:
+  port: 6082
+# 应用名称
+spring:
+  profiles:
+    active: local
+  application:
+    name: ${prefix.distinction.name:damai}-user-service
+  main:
+    allow-bean-definition-overriding: true
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+    servlet:
+      load-on-startup: 1
+    jackson:
+      time-zone: GMT+8
+      date-format: yyyy-MM-dd HH:mm:ss
+      generator:
+        WRITE_NUMBERS_AS_STRINGS: true
+  datasource:
+    driver-class-name: org.apache.shardingsphere.driver.ShardingSphereDriver
+    url: jdbc:shardingsphere:classpath:shardingsphere-user-${spring.profiles.active}.yaml
+  data:  
+    redis:
+      database: 0
+      host: 127.0.0.1
+      port: 6379
+      timeout: 3000
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        username: nacos
+        password: nacos
+bloom-filter:
+  name: user-register-bloom-filter
+  expectedInsertions: 1000
+  falseProbability: 0.01
+aj:
+  captcha:
+    cache-type: redis
+    type: default
+    water-mark: \u6211\u7684\u6C34\u5370
+    slip-offset: 5
+    aes-status: true
+    interference-options: 2
+    font-style: 1
+    font-size: 25
+    history-data-clear-enable: false
+    req-frequency-limit-enable: false
+    req-get-lock-limit: 5
+    req-get-lock-seconds: 360
+    req-get-minute-limit: 30
+    req-check-minute-limit: 30  
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  global-config:
+    db-config:
+      logic-delete-field: status
+      logic-delete-value: 0
+      logic-not-delete-value: 1
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    local-cache-scope: statement
+feign:
+  sentinel:
+    enabled: false
+  hystrix:
+    enabled: true
+  httpclient:
+    enabled: false
+  okhttp:
+    enabled: true
+  compression:
+    request:
+      enabled: true
+      mime-types: text/xml,application/xml,application/json
+      min-request-size: 512
+    response:
+      enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+    health:
+      show-details: always
+  security:
+    enabled: false
+  health:
+    elasticsearch:
+      enabled: false
+jasypt:
+  encryptor:
+    password: bgtjkjl!%^sdc
+    algorithm: PBEWithMD5AndDES
+always_verify_captcha: 1
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    tags-sorter: alpha
+    operations-sorter: alpha
+  api-docs:
+    path: /v3/api-docs
+  group-configs:
+    - group: 'default'
+      paths-to-match: '/**'
+      #生成文档所需的扫包路径，一般为启动类目录
+      packages-to-scan: com.damai.controller
+#knife4j配置
+knife4j:
+  #是否启用增强设置
+  enable: true
+  #开启生产环境屏蔽
+  production: false
+  #是否启用登录认证
+  basic:
+    enable: false
+  setting:
+    language: zh_cn
+    enable-version: true
+    enable-swagger-models: true

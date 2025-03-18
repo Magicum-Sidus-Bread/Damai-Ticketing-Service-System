@@ -6,10 +6,10 @@ import java.util.List;
 import java.util.Queue;
 
 /**
- * @program: 极度真实还原大麦网高并发实战项目。 添加 阿星不是程序员 微信，添加时备注 大麦 来获取项目的完整资料 
+ * @program: 极度真实还原大麦网高并发实战项目。  
  * @description: 抽象类 AbstractComposite 表示组合接口，用于构建和执行具有树结构的业务逻辑
  * @param <T> 泛型参数，表示执行业务时传递的参数类型
- * @author: 阿星不是程序员
+ * @author: Magicum Sidus（Niuzhongyu）
  **/
 public abstract class AbstractComposite<T> {
     

@@ -7,11 +7,11 @@ import java.util.Objects;
 
 
 /**
- * @program: 极度真实还原大麦网高并发实战项目。 添加 阿星不是程序员 微信，添加时备注 大麦 来获取项目的完整资料 
+ * @program: 极度真实还原大麦网高并发实战项目。  
  * @description:  * 对于分布式部署的应用，我们建议应用自己实现CaptchaCacheService，比如用Redis，参考service/spring-boot代码示例。
  *  如果应用是单点的，也没有使用redis，那默认使用内存。
  *  内存缓存只适合单节点部署的应用，否则验证码生产与验证在节点之间信息不同步，导致失败。
- * @author: 阿星不是程序员
+ * @author: Magicum Sidus（Niuzhongyu）
  **/
 public class CaptchaCacheServiceMemImpl implements CaptchaCacheService {
     @Override

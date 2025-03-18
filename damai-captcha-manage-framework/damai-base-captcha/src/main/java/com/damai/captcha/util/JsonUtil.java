@@ -10,9 +10,9 @@ import java.util.Map;
 
 
 /**
- * @program: 极度真实还原大麦网高并发实战项目。 添加 阿星不是程序员 微信，添加时备注 大麦 来获取项目的完整资料 
+ * @program: 极度真实还原大麦网高并发实战项目。  
  * @description: 替换掉fastjson，自定义实现相关方法   note: 该实现不具有通用性，仅用于本项目。
- * @author: 阿星不是程序员
+ * @author: Magicum Sidus（Niuzhongyu）
  **/
 public class JsonUtil {
 	private static final Logger logger = LoggerFactory.getLogger(JsonUtil.class);

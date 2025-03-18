@@ -11,9 +11,9 @@ import com.damai.servicelock.factory.ServiceLockFactory;
 import org.springframework.context.annotation.Bean;
 
 /**
- * @program: 极度真实还原大麦网高并发实战项目。 添加 阿星不是程序员 微信，添加时备注 大麦 来获取项目的完整资料 
+ * @program: 极度真实还原大麦网高并发实战项目。  
  * @description: 防重复幂等配置
- * @author: 阿星不是程序员
+ * @author: Magicum Sidus（Niuzhongyu）
  **/
 public class RepeatExecuteLimitAutoConfiguration {
     

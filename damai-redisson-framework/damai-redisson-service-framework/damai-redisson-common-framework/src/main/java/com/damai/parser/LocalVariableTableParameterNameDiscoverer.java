@@ -24,9 +24,9 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * @program: 极度真实还原大麦网高并发实战项目。 添加 阿星不是程序员 微信，添加时备注 大麦 来获取项目的完整资料 
+ * @program: 极度真实还原大麦网高并发实战项目。  
  * @description: 此类在 6.1其实被废弃，但是只能这个类才能实现对 #对象.属性 的spel解析，所以还得加上
- * @author: 阿星不是程序员
+ * @author: Magicum Sidus（Niuzhongyu）
  **/
 public class LocalVariableTableParameterNameDiscoverer implements ParameterNameDiscoverer {
 

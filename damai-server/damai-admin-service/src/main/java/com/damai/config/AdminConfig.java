@@ -31,7 +31,7 @@ public class AdminConfig {
                         .version("1.0")
                         .description("项目学习")
                         .contact(new Contact()
-                                .name("阿星不是程序员")
+                                .name(" MagicumSidus")
                         ));
         
     }
